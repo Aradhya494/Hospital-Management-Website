@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*  root out  */
+:root{
+    --blue:#0188df;
+    --black:#444d53;
+    --white:#fff;
+}
+
+/* custom css */
+*{
+     font-family: "Roboto", sans-serif;
+     margin: 0; padding: 0;
+     text-decoration: none;
+     text-transform: capitalize;
+     outline: none;
+     box-sizing: border-box;
+     transition: all linear .2s;
+    }
+
+
+ html{
+    font-size: 92%;
+    overflow-y: auto;
+
+ }  
+ /*header navbar section*/
+
+ header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 50px;
+}
+
+.navbar ul{
+display: flex;
+list-style: none;
+gap: 20px;
+}
+
+.navbar ul li a{
+text-decoration: none;
+color: black;
+font-size: 18px;
+}
+
+.logo{
+font-size: 24px;
+font-weight: bold;
+}
+
+.logo span{
+color: #0a8cd2;
+}
+
+ /* logo name */
+ header .logo{
+   color:var(--black);
+ }
+
+ header a:hover{
+   color: var(--black);
+ }
+
+ header .logo{
+   font-size:3rem;
+ }
+
+ header .logo span{
+   color: var(--blue);
+ }
+
+ /* navbar link */
+ header .navbar ul{
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+   list-style: none;
+   gap: 20px;
+ }
+
+ header .navbar ul li{
+   margin: 0 1rem;
+ }
+
+ header .navbar ul li a {
+   font-size: 2rem;
+   color: var(--black);
+ }
+
+ header .navbar ul li a:hover{
+  color: var(--blue);
+ }
+
+ header .fa-bars{
+  font-size: 3rem;
+  color: var(--blue);
+  cursor: pointer;
+  display: none;
+ }
+header .fa-times{
+  transform: rotate(180deg);
+}
+.header-active{
+  top: 0;
+  width: 100%;
+  box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+}
+.btn{
+    background: var(--blue);
+    color: white;
+    padding: .8rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #0166a6;
+}
+.images img{
+    width: 100%;
+    animation: float 3s infinite;
+}
+
+@keyframes float{
+    0%{ transform: translateY(0); }
+    50%{ transform: translateY(-10px); }
+    100%{ transform: translateY(0); }
+}
+@media (max-width:500px){
+    .row{
+        flex-direction: column;
+    }
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+body{
+  font-family: Arial,  sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+
+}
+section{
+  padding: 50px 10%;
+}
+
+
+
+
+
+
+
+ /*media query*/
+ @media (max-width:768px){
+
+  html{
+    font-size: 55%;
+  }
+  header .fa-bars{
+    display: block;
+  }
+  header .navbar{
+    position: fixed;
+    top: -100rem; left: 0;
+    width: 100%;
+    background: var(--white);
+    /* opacity: 0; */
+  }
+
+  header .navbar ul{
+    flex-flow: column;
+    padding: 2rem 0;
+  }
+
+  header .navbar ul li{
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  header .navbar ul li a{
+    font-size: 3rem;
+    display: block;
+  }
+ }
+
+ header .nav-toggle{
+    top: 5.5rem;
+    opacity: 1;
+ }
+ .navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+ }
+ menu{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+ }
+.home{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  
+  
+}
+.home .content{
+  width: 50px;
+  
+}
+.home .image img{
+  width: 400px;
+  max-height: 500px;
+  align-self: flex-start;
+  
+}
+.appointment{
+  display: flex;
+  gap: 10px;
+  padding: 30px;
+}
+.appointment input{
+  padding: 8px;
+}
+.appointment button{
+  background: blue;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+}
+.row{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 40px;
+}
+
+.images img{
+width: 350px;
+}
+
+.doctor-section{
+display: flex;
+gap: 40px;
+padding: 40px;
+}
+
+.doctor-box{
+text-align: center;
+}
+
+.appointment-form{
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 300px;
+}
+.btn{
+background:#0a8cd2;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size: 16px;
+}
+.btn:hover{
+  background: #086da8;
+}
+.doctor-box{
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 200px;
+}
+.doctor-box img{
+  width: 100%;
+  border-radius: 10px;
+}
+.appointment-form input,
+.appointment-form textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+width:100%;
+}
+
+.appointment-form button{
+margin-top:10px;
+}
+.services{
+text-align:center;
+}
+
+.service-container{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:10px;
+}
+
+.service-box{
+background:white;
+padding:15px;
+width:200px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.doctors-container{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.review-container{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.review-box{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.heading{
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.about-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+}
+
+.about-image img{
+width:350px;
+border-radius:10px;
+
+}
+
+.about-content{
+max-width:400px;
+}
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:10px;
+width:300px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+.blog-container{
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+.blog-box{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.service-box i{
+font-size:40px;
+color:#0a8cd2;
+margin-bottom:10px;
+}
+.btn{
+background:#0a8cd2;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#086da8;
+transform:scale(1.05);
+}
+.service-box,
+.doctor-box,
+.blog-box{
+transition:0.3s;
+}
+
+.service-box:hover,
+.doctor-box:hover,
+.blog-box:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+.service-box i{
+animation:float 2s infinite alternate;
+}
+
+@keyframes float{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-10px);
+}
+}
+body{
+  background-image:url(https://media.istockphoto.com/id/2099370050/vector/health-care-and-abstract-geometric-medical-background-with-icons-concept-and-idea-for.jpg?s=612x612&w=0&k=20&c=1DtMRN0keWpygxoo7IvrHUnipxqsRkSpKpg0wKLj75M=);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.home image{
+  max-height: 500px;
+  align-self: flex-start;
+  padding-left: 30px;
+}
